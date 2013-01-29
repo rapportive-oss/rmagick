@@ -202,7 +202,7 @@ end
 
 
 
-if RUBY_PLATFORM !~ /mswin|mingw/
+if RUBY_PLATFORM !~ /mswin|mingw/ && !pkg_config("MagickWand")
 
   unless have_library("MagickCore", "InitializeMagick", headers) || have_library("Magick", "InitializeMagick", headers) || have_library("Magick++","InitializeMagick",headers)
     exit_failure "Can't install RMagick #{RMAGICK_VERS}. " +
