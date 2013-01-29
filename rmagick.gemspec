@@ -1,7 +1,9 @@
 require 'date'
+require File.expand_path('lib/RMagick_version', File.dirname(__FILE__))
+
 Gem::Specification.new do |s|
   s.name = %q{rmagick}
-  s.version = "0.0.0"
+  s.version = Magick::VERSION
   s.date = Date.today.to_s
   s.summary = %q{Ruby binding to ImageMagick}
   s.description = %q{RMagick is an interface between Ruby and ImageMagick.}

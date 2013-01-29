@@ -1,7 +1,8 @@
 require "mkmf"
 require "date"
+require File.expand_path('../../lib/RMagick_version', File.dirname(__FILE__))
 
-RMAGICK_VERS = "0.0.0"
+RMAGICK_VERS = Magick::VERSION
 MIN_RUBY_VERS = "1.8.5"
 MIN_RUBY_VERS_NO = MIN_RUBY_VERS.tr(".","").to_i
 MIN_IM_VERS = "6.4.9"
